@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+
+:root {
+  --color-primary: #E6007A;
+  --color-primary-alt: #FF1493;
+  --color-secondary: #39FF14;
+  --color-bg-deep: #000000;
+  --color-bg-outer: #1A1C20;
+  --color-text-main: #FFFFFF;
+  --color-text-silver: #A0A0A0;
+  
+  --font-main: 'Outfit', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-bg-deep);
+  background-image: radial-gradient(circle at 50% 0%, var(--color-bg-outer) 0%, var(--color-bg-deep) 70%);
+  color: var(--color-text-main);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Typography Utilities */
+.text-gradient {
+  background: linear-gradient(180deg, var(--color-text-main) 0%, var(--color-text-silver) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-neon-pink {
+  color: var(--color-primary);
+  text-shadow: 0 0 10px rgba(230, 0, 122, 0.5);
+}
+
+.text-neon-green {
+  color: var(--color-secondary);
+  text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+}
+
+/* Glassmorphism Utilities */
+.glass {
+  background: rgba(26, 28, 32, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  background-color: var(--color-primary);
+  color: var(--color-text-main);
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(230, 0, 122, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-alt);
+  box-shadow: 0 0 25px rgba(255, 20, 147, 0.7);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  background-color: transparent;
+  color: var(--color-text-main);
+  font-weight: 600;
+  border: 2px solid var(--color-text-silver);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-outline:hover {
+  border-color: var(--color-text-main);
+  background-color: rgba(255,255,255,0.05);
+  transform: translateY(-2px);
+}
